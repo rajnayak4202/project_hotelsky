@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class CustomerController extends Controller
 {
-    public function customer()
+    public function Customer()
     {
         return view('customer_page');
     }

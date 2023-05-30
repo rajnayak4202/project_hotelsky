@@ -15,10 +15,7 @@ return new class extends Migration
     {
         Schema::create('room_historys', function (Blueprint $table) {
             $table->id('room_history_id');
-
-            $table->unsignedBigInteger('room_history_customer_id');
-            $table->foreign('room_history_customer_id')->references('customer_id')->on('customers');
-           
+  
             $table->unsignedBigInteger('room_history_room_category_id');
             $table->foreign('room_history_room_category_id')->references('room_category_id')->on('room_categories');
 

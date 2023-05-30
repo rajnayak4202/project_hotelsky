@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('rooms', function (Blueprint $table) {
             $table->id('room_id');
             $table->string('room_no');
+            $table->boolean('room_status')->default('1');
             $table->unsignedBigInteger('room_room_category_id');
             $table->foreign('room_room_category_id')->references('room_category_id')->on('room_categories');
             $table->rememberToken();
